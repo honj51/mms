@@ -1,0 +1,28 @@
+{
+  "name": "mms",
+  "version": "1.0.0",
+  "description": "萌萌说保险",
+  "main": "''",
+  "scripts": {
+    "test": "''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ingbaobeigroup/mms.git"
+  },
+  "keywords": [
+    "mms",
+    "ingbaobei"
+  ],
+  "author": "ingbaobei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ingbaobeigroup/mms/issues"
+  },
+  "homepage": "https://github.com/ingbaobeigroup/mms",
+  "devDependencies": {
+    "grunt": "0.4.2",
+    "grunt-contrib-concat": "0.4.0",
+    "grunt-contrib-uglify": "0.3.2"
+  }
+}
