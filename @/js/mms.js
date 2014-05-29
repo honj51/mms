@@ -59,23 +59,27 @@ $(function(){
           createAudio( baseUrl, data.audios);
         };
         // 大喇叭
+        var $mms = $( '#mms-mm' );
         if( data.mmsPng ) {
-          var $mms = $( '#mms-mm' );
           $mms[0].src = baseUrl + data.mmsPng;
           
           $mms.on('error', function() {
             $mms[0].src = '/@/icon/mms-mm.png';
           })
+        } else {
+          $mms[0].src = '/@/icon/mms-mm.png';
         }
 
         // title图片
+        var $titlePng = $( '#title-png' );
         if( data.titlePng ) {
-          var $titlePng = $( '#title-png' );
           $titlePng[0].src = baseUrl + data.titlePng;
           
           $titlePng.on('error', function() {
             $titlePng[0].src = '/@/icon/title-default.png';
           })
+        } else {
+          $titlePng[0].src = '/@/icon/title-default.png';
         }
 
         // title图片
@@ -86,6 +90,8 @@ $(function(){
           $qrPng.on('error', function() {
             $qrPng[0].src = '/@/icon/qr-id.png';
           })
+        } else{
+          $qrPng[0].src = '/@/icon/qr-id.png';
         }
 
         if( data.bgColor ){
