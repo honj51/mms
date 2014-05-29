@@ -1542,7 +1542,8 @@ $(function(){
     $.ajax({
       url: '/@/qi/' + qi + "/init.json?&random=" + Math.random(), 
       success: function( data ){
-        console.log(data);
+        // console.log(data);
+
         var baseUrl = data.baseUrl;
         if(data.audios){
           createAudio( baseUrl, data.audios);
@@ -1583,6 +1584,8 @@ $(function(){
           })
         }
         document.title = data.title + data.titleEnd || '萌萌说-盈保倍';
+
+        $('.marker-loading').hide();
       },
       error: function() {
         ajaxTime ++;
