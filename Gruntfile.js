@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     concat: {
       build: {
-        src: ['./@/js/zepto.js', './@/js/event.js', './@/js/mms.js'],
+        src: ['./@/js/zepto.js', './@/js/event.js', './@/js/ajax.js', './@/js/mms.js'],
         dest: './@/js/mms.ingbaobei.com.js'
       }
     },
