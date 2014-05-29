@@ -1517,7 +1517,6 @@ $(function(){
   window.onbeforeunload = closeAudio;
   window.onunload = closeAudio;
 
-})
   $('.marker-loading').show();
 
   var href = location.href;
@@ -1673,3 +1672,4 @@ $(function(){
       var self = $(this).hide();
     }
   })
+})
