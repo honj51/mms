@@ -11,7 +11,6 @@
   "mmsPng": "mms.png",
   "qrPng": "qr.png",
   "audios": [
-    ["audio/mpeg","audio.mp3"],
-    ["audio/ogg","audio.ogg"]
+    ["audio/mp4","audio.m4a"]
   ]
 }
