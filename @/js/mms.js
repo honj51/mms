@@ -180,8 +180,8 @@ $(function() {
     }
   }
   // 良好的用户体验很重要
-  document.body.onblur = blurDoing;
-  window.onblur = blurDoing;
+  // document.body.onblur = blurDoing;
+  // window.onblur = blurDoing;
   window.onbeforeunload = blurDoing;
   window.onunload = blurDoing;
 
