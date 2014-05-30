@@ -1,0 +1,17 @@
+{
+  "baseUrl": "./@/qi/3/",
+  "qi": "3",
+  "bgColor": "#ffcdcb",
+  "date": "2014/05/28",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "爱情那点事儿~",
+  "titleEnd": "萌萌说-盈保倍",
+  "titlePng": "title.png",
+  "mmsPng": "mms.png",
+  "qrPng": "qr.png",
+  "audios": [
+    ["audio/mpeg","audio.mp3"],
+    ["audio/ogg","audio.ogg"]
+  ]
+}
