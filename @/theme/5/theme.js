@@ -20,6 +20,4 @@ $(function() {
   $qrPng.on('error', function() {
     $qrPng[0].src = './@/icon/qr-id.png';
   })
-
-
 })

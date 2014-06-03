@@ -5,12 +5,13 @@ http://mms.ingbaobei.com/qi.html
 http://mms.ingbaobei.com/@/css/mms.min.css
 http://mms.ingbaobei.com/@/js/mms.ingbaobei.com.min.js
 
+
 http://mms.ingbaobei.com/
 http://mms.ingbaobei.com/index.html
 http://mmsbx.qiniudn.com/@/audio/default-audio.ogg
 http://mmsbx.qiniudn.com/@/audio/default-audio.mp3
 
-
+#default
 http://mmsbx.qiniudn.com/@/icon/mms-logo.png
 http://mmsbx.qiniudn.com/@/icon/mms-mm.png
 http://mmsbx.qiniudn.com/@/icon/record-m.png
@@ -19,12 +20,82 @@ http://mmsbx.qiniudn.com/@/icon/title-default.png
 http://mmsbx.qiniudn.com/@/icon/qr-id.png
 http://mmsbx.qiniudn.com/@/icon/loading.gif
 
+#qi data
+http://mms.ingbaobei.com/@/qi/7/init.json
+http://mms.ingbaobei.com/@/qi/7/mms.png
+http://mms.ingbaobei.com/@/qi/7/qr.png
+http://mms.ingbaobei.com/@/qi/7/title.png
+http://mms.ingbaobei.com/@/qi/7/audio.mp3
+http://mms.ingbaobei.com/@/qi/7/audio.ogg
+http://mms.ingbaobei.com/@/qi/7/audio.m4a
+
+http://mms.ingbaobei.com/@/qi/6/init.json
+http://mms.ingbaobei.com/@/qi/6/mms.png
+http://mms.ingbaobei.com/@/qi/6/qr.png
+http://mms.ingbaobei.com/@/qi/6/title.png
+http://mms.ingbaobei.com/@/qi/6/audio.mp3
+http://mms.ingbaobei.com/@/qi/6/audio.ogg
+http://mms.ingbaobei.com/@/qi/6/audio.m4a
+
 http://mms.ingbaobei.com/@/qi/5/init.json
 http://mms.ingbaobei.com/@/qi/5/mms.png
 http://mms.ingbaobei.com/@/qi/5/qr.png
 http://mms.ingbaobei.com/@/qi/5/title.png
 http://mms.ingbaobei.com/@/qi/5/audio.mp3
 http://mms.ingbaobei.com/@/qi/5/audio.ogg
+http://mms.ingbaobei.com/@/qi/5/audio.m4a
+
+http://mms.ingbaobei.com/@/qi/4/init.json
+http://mms.ingbaobei.com/@/qi/4/mms.png
+http://mms.ingbaobei.com/@/qi/4/qr.png
+http://mms.ingbaobei.com/@/qi/4/title.png
+http://mms.ingbaobei.com/@/qi/4/audio.mp3
+http://mms.ingbaobei.com/@/qi/4/audio.ogg
+http://mms.ingbaobei.com/@/qi/4/audio.m4a
+
+http://mms.ingbaobei.com/@/qi/3/init.json
+http://mms.ingbaobei.com/@/qi/3/mms.png
+http://mms.ingbaobei.com/@/qi/3/qr.png
+http://mms.ingbaobei.com/@/qi/3/title.png
+http://mms.ingbaobei.com/@/qi/3/audio.mp3
+http://mms.ingbaobei.com/@/qi/3/audio.ogg
+http://mms.ingbaobei.com/@/qi/3/audio.m4a
+
+http://mms.ingbaobei.com/@/qi/2/init.json
+http://mms.ingbaobei.com/@/qi/2/mms.png
+http://mms.ingbaobei.com/@/qi/2/qr.png
+http://mms.ingbaobei.com/@/qi/2/title.png
+http://mms.ingbaobei.com/@/qi/2/audio.mp3
+http://mms.ingbaobei.com/@/qi/2/audio.ogg
+http://mms.ingbaobei.com/@/qi/2/audio.m4a
+
+http://mms.ingbaobei.com/@/qi/1/init.json
+http://mms.ingbaobei.com/@/qi/1/mms.png
+http://mms.ingbaobei.com/@/qi/1/qr.png
+http://mms.ingbaobei.com/@/qi/1/title.png
+http://mms.ingbaobei.com/@/qi/1/audio.mp3
+http://mms.ingbaobei.com/@/qi/1/audio.ogg
+http://mms.ingbaobei.com/@/qi/1/audio.m4a
 
 
+#theme
 
+http://mms.ingbaobei.com/@/theme/5/mms.png
+http://mms.ingbaobei.com/@/theme/5/qr.png
+http://mms.ingbaobei.com/@/theme/5/theme.js
+
+http://mms.ingbaobei.com/@/theme/4/mms.png
+http://mms.ingbaobei.com/@/theme/4/qr.png
+http://mms.ingbaobei.com/@/theme/4/theme.js
+
+http://mms.ingbaobei.com/@/theme/3/mms.png
+http://mms.ingbaobei.com/@/theme/3/qr.png
+http://mms.ingbaobei.com/@/theme/3/theme.js
+
+http://mms.ingbaobei.com/@/theme/2/mms.png
+http://mms.ingbaobei.com/@/theme/2/qr.png
+http://mms.ingbaobei.com/@/theme/2/theme.js
+
+http://mms.ingbaobei.com/@/theme/1/mms.png
+http://mms.ingbaobei.com/@/theme/1/qr.png
+http://mms.ingbaobei.com/@/theme/1/theme.js

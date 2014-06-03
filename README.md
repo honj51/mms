@@ -71,18 +71,80 @@ $ anywhere 80
     \less:
       normalize.less: 大神的 normalize ，从bootstrap抄下来的。
       mms.less: 萌萌说 qi.html 的css
+    \theme: 萌萌说主题文件，加紧了主题，就不需要进行每次都进行切图了。
+      \1: 主题1。
+      \2: 主题2。
+      \3: 主题3。
+      \4: 主题4。
+      \5: 主题5。
+        mms.png: 大喇叭的图片。
+        qr.png: 二维码的图片。
+        theme.js: 主题的配置文件。
+
+      以后每次增加主题都需要在这里添加，按照这里的格式以及文件名。
+
     \qi: 每次更新一期萌萌说，都要往里面更新数据啊。
       \latest: 最新版本萌萌说的信息获取的地方，适用于 qi.html 页面， 如果url 为 qi.html?qi=3 之类的就不适用了。
         init.json: 上面文件夹说明一切
       \3: 第三期版本的资源文件
         init.json: 第三期版本的数据文件
-        audio.mp3: 第三期版本的 mp3 格式音频
-        audio.ogg: 第三期版本的 ogg 格式音频
-        mms.png: 上面那个大喇叭的图片，大小一定要按照这个比例进行。
-        qr.png: 含有二维码的那个图片。
+        audio.m4a: 第三期版本的 m4a 格式音频
         title.png: 这一期的那个版本png title。
       index.all.json: 暂时还没用到，不过也要写进去
 ```
+##发布一个主题
+```
+  \mms\@\theme\
+    \主题名
+      mms.png: 大喇叭的图片。
+      qr.png: 二维码的图片。
+      theme.js: 主题文件。
+```
+如上的文件格式，发布一个主题。
+例如发布 99999 主题。
+需要把 99999 主题对应的 ```mms.png``` 和 ```qr.png``` 放进主题文件夹，然后，写一个 ```theme.js```，格式如下：
+
+```
+$(function() {
+  // 主题编号，一定要对应文件夹名字
+  var theme = '5'; 
+  // 背景颜色
+  var bgc = '#ffcc99'; 
+
+  $('body').css({
+    "background": bgc
+  })
+  // 大喇叭
+  var $mms = $('#mms-mm');
+  $mms[0].src = '/@/theme/' + theme + '/mms.png';
+  $mms.on('error', function() {
+    $mms[0].src = './@/icon/mms-mm.png';
+  })
+
+  // qr图片
+  var $qrPng = $('#qr-id');
+  $qrPng[0].src = '/@/theme/' + theme + '/qr.png';
+  $qrPng.on('error', function() {
+    $qrPng[0].src = './@/icon/qr-id.png';
+  })
+})
+```
+复制上面代码，改动两个地方，
+```
+// 主题编号，一定要对应文件夹名字
+var theme = '5'; 
+```
+改为对应的主题文件夹的名字。
+```
+// 背景颜色
+var bgc = '#ffcc99';
+```
+改为对应的背景颜色值。
+然后放在和 ```mms.png``` 和 ```qr.png``` 同一层目录即可。
+
+
+
+
 
 ##发布新一期版本
 
@@ -95,8 +157,6 @@ $ anywhere 80
 init.json: 第 99999 期版本 的数据文件
 audio.mp3: 第 99999 期版本 的 mp3 格式音频
 audio.ogg: 第 99999 期版本 的 ogg 格式音频
-mms.png:  第 99999 期版本上面那个大喇叭的图片，大小一定要按照这个比例进行。
-qr.png:  第 99999 期版本 含有二维码的那个图片。
 title.png:  第 99999 期版本 这一期的那个版本png title。
 ```
 特别注意的是：可能不是每一天都进行风格的变动，所以会有一个默认的 风格，就是 ```\@\icon\``` 里面的那几张 ```png```，是和第三期基本相同的风格来的。所以能够不进行 png 的资源处理。
@@ -106,18 +166,17 @@ title.png:  第 99999 期版本 这一期的那个版本png title。
 
 ```javascript
 {
-  "baseUrl": "/@/qi/99999/", // 99999，就是第几期了。把数字替换掉就行。
+  "baseUrl": "", // 字段暂时去掉。
   "qi": "99999", // 99999，就是第几期了。
-  "bgColor": "#ffcdcb", // body的背景颜色把。想要什么颜色就改什么颜色， 统一写16进制颜色
+  "theme": "4", // 第几个 主题文件。
   "date": "2014/05/28", // 按照这个格式写版本的发布时间，精确到天，一天发布几个版本的话，没必要精确到几点了。
   "author": "萌萌", // 作者，默认萌萌
   "app": "mms", // app名字，默认 mms
   "title": "爱情那点事儿~", // 这一期的title前缀，每期都不同
   "titleEnd": "萌萌说-盈保倍", // 这一期的title后缀，默认这样子
   "titlePng": "title.png", // 这一期的title 图片，就是上面的那个 title.png 的名字，反正名字你随便修，写进这里能正确访问进行了。 可以不写，会使用 ```/@/icon/title-default.png``` 的默认图片。
-  "mmsPng": "mms.png", // 这一期的 大喇叭 图片，就是上面的那个 mms.png 的名字，反正名字你随便修，写进这里能正确访问进行了。 可以不写，会使用 ```/@/icon/mms-mm.png``` 的默认图片。
-  "qrPng": "qr.png", // 这一期的 二维码那一块的 图片，就是上面的那个 qr.png 的名字，反正名字你随便修，写进这里能正确访问进行了。 可以不写，会使用 ```/@/icon/qr-id.png``` 的默认图片。
   "audios": [
+    ["audio/mp4","audio.m4a"],
     ["audio/mpeg","audio.mp3"],
     ["audio/ogg","audio.ogg"]
   ] // 最后就是这个音频了。这个音频为多维数组的形式的，```audios``` 为一个数组，数组长度不知，默认里面的音频数据都需要支持所有移动端浏览器就行了。所以每一个子数组下面，都会有两个值，第一个是 ```audio``` 的 ```type``` 属性值，第二个就是 ```src```路径了。
