@@ -9,6 +9,6 @@
   "titleEnd": "-萌萌说-盈保倍",
   "titlePng": "./@/qi/7/title.png",
   "audios": [
-    ["audio/mp4","audio.m4a"]
+    ["audio/mp4","./@/qi/7/audio.m4a"]
   ]
 }
