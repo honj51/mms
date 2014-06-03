@@ -1,15 +1,13 @@
 {
-  "baseUrl": "./@/qi/7/",
+  "baseUrl": "",
   "qi": "7",
-  "bgColor": "#5ebcf0",
+  "theme": "4",
   "date": "2014/06/01",
   "author": "萌萌",
   "app": "mms",
   "title": "少儿重疾的真相",
   "titleEnd": "-萌萌说-盈保倍",
-  "titlePng": "title.png",
-  "mmsPng": "mms.png",
-  "qrPng": "qr.png",
+  "titlePng": "./@/qi/7/title.png",
   "audios": [
     ["audio/mp4","audio.m4a"]
   ]

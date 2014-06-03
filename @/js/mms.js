@@ -21,12 +21,14 @@ $(function() {
    * @return {null}
    **/
   function ajaxGet() {
+    // console.log(qi);
     $.ajax({
       url: './@/qi/' + qi + "/init.json?&random=" + Math.random(),
       success: function(data) {
         // console.log(data);
+        window.data1 = data;
 
-        var baseUrl = data.baseUrl;
+        var baseUrl = data.baseUrl || "";
         if (data.audios) {
           createAudio(baseUrl, data.audios);
         };
@@ -38,7 +40,9 @@ $(function() {
           $mms.on('error', function() {
             $mms[0].src = './@/icon/mms-mm.png';
           })
-        } else {
+        } else if( data.theme === undefined ){
+          // 如果没写主题的话，就采用这个默认皮肤
+          // 大喇叭
           $mms[0].src = './@/icon/mms-mm.png';
         }
 
@@ -50,11 +54,13 @@ $(function() {
           $titlePng.on('error', function() {
             $titlePng[0].src = './@/icon/title-default.png';
           })
-        } else {
+        } else if( data.theme === undefined ){
+          // 如果没写主题的话，就采用这个默认皮肤
+          // title图片
           $titlePng[0].src = './@/icon/title-default.png';
         }
 
-        // title图片
+        // qr图片
         if (data.qrPng) {
           var $qrPng = $('#qr-id');
           $qrPng[0].src = baseUrl + data.qrPng;
@@ -62,7 +68,9 @@ $(function() {
           $qrPng.on('error', function() {
             $qrPng[0].src = './@/icon/qr-id.png';
           })
-        } else {
+        } else if( data.theme === undefined ){
+          // 如果没写主题的话，就采用这个默认皮肤
+          // qr图片
           $qrPng[0].src = './@/icon/qr-id.png';
         }
 
@@ -73,16 +81,23 @@ $(function() {
         }
         document.title = data.title + data.titleEnd || '萌萌说-盈保倍';
 
+        // 如果主题文件写了，就直接添加成为主题文件
+        if(data.theme !== undefined){
+          $.get('./@/theme/'+data.theme+'/theme.js');
+          // $('body').append('<script type="text/javascript" src="./@/theme/'+data.theme+'/theme.js"></script>');
+        }
+
         $('.marker-loading').hide();
       },
       error: function() {
+        // console.log(this);
         ajaxTime++;
         // 最多请求三次
         if (ajaxTime > 3) {
           $('.marker-loading').hide();
           $('#ajax-error').show();
           setTimeout(function() {
-            location.href = './';
+            // location.href = './';
           }, 5000)
           // alert('出错，请重新打开。');
         } else {
