@@ -83,7 +83,9 @@ $(function() {
 
         // 如果主题文件写了，就直接添加成为主题文件
         if(data.theme !== undefined){
-          $.get('./@/theme/'+data.theme+'/theme.js');
+          $.get('./@/theme/'+data.theme+'/theme.js',"",function( data ) {
+            new Function(data)();
+          }, "text/javascript");
           // $('body').append('<script type="text/javascript" src="./@/theme/'+data.theme+'/theme.js"></script>');
         }
 
