@@ -99,7 +99,7 @@ $(function() {
           $('.marker-loading').hide();
           $('#ajax-error').show();
           setTimeout(function() {
-            // location.href = './';
+            location.href = './';
           }, 5000)
           // alert('出错，请重新打开。');
         } else {
