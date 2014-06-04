@@ -1539,7 +1539,8 @@ $(function() {
   window.$dataElem = $dataElem;
   var oldActive = 1;
   function buildDate( active ) {
-    var perpage = 10;
+    // var perpage = 10;
+    var perpage = 5;
     active = active === undefined? 1 : parseInt(active, 10);
     // active = 4;
     var begin = ( active - 1 ) * perpage;
