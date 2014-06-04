@@ -1,0 +1,102 @@
+@import url(normalize.less);
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix {
+  .clearfix();
+}
+
+body{
+  background-color: #ffcdcb;
+  width: 100%;
+  position: relative;
+  // overflow: hidden;
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;
+}
+@pageBaseHeight: 1710;
+
+.mms{
+  width: 100%;
+  position: relative;
+  img{
+    float: right;
+    max-width: 100%;
+    height: auto;
+  }
+}
+.mms-pager{
+  .pagination{
+    float: right;
+  }
+}
+.mms-list, .mms-pager{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mms-pager .pagination{
+  margin-top: 0px;
+}
+
+.marker{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  display: none;
+  overflow: auto;
+  overflow-y: hidden;
+  background-color: rgba(51,51,51,.5);
+  width: 100%;
+  height: 100%;
+  .loading{
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -80px;
+    margin-top: -80px;
+  }
+  .desc{
+    width: 160px;
+    // height: 100px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -80px;
+  }
+}
+
+.mms-list {
+  img.loading{
+    display: block;
+    margin: 1em auto;
+  }
+  .list-group-item{
+    background-color: rgba(255,255,255,0.3);
+    padding: 5px 15px;
+  }
+}
+
+
+
+a[href^="http://tongji.baidu.com"]{
+  position:absolute;
+  display: block;
+  z-index:-999;
+  left:-100000px;
+  top:-111111px;
+}
