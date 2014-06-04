@@ -27,7 +27,9 @@ $(function() {
         } else {
           $('.marker-loading').hide();
           $('#ajax-error').show();
+          $('.mms-list-box').empty();
         }
+        getIndexDataTime ++;
       }
     })
   }
@@ -59,7 +61,7 @@ $(function() {
     for(; begin < end && begin < dataLength; begin++){
       var dataElem = indexData[begin];
       $dataElem[begin] = $dataElem[begin] || $('<a href="./qi.html?qi='+ dataElem.qi +'" class="list-group-item">' + 
-          '<h4 class="list-group-item-heading">' + begin + " : " + dataElem.title +'</h4>' +
+          '<h4 class="list-group-item-heading">第' + dataElem.qi + "期 : " + dataElem.title +'</h4>' +
           '<p class="list-group-item-text"><span>'+ dataElem.author +'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>'+ dataElem.date +'</span></p>' +
         '</a>');
       // console.log( $dataElem );
