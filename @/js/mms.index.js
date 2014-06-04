@@ -10,7 +10,7 @@ $(function() {
    **/
   function getIndexData() {
     $.ajax({
-      url: "./@/qi/index.all.json",
+      url: "./@/qi/index.all.json?"+Math.random(),
       data: "",
       success: function( data) {
         indexData = data;
