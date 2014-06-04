@@ -8,8 +8,7 @@ http://mms.ingbaobei.com/@/js/mms.ingbaobei.com.min.js
 
 http://mms.ingbaobei.com/
 http://mms.ingbaobei.com/index.html
-http://mmsbx.qiniudn.com/@/audio/default-audio.ogg
-http://mmsbx.qiniudn.com/@/audio/default-audio.mp3
+
 
 #default
 http://mmsbx.qiniudn.com/@/icon/mms-logo.png
@@ -99,3 +98,7 @@ http://mms.ingbaobei.com/@/theme/2/theme.js
 http://mms.ingbaobei.com/@/theme/1/mms.png
 http://mms.ingbaobei.com/@/theme/1/qr.png
 http://mms.ingbaobei.com/@/theme/1/theme.js
+
+
+http://mmsbx.qiniudn.com/@/audio/default-audio.ogg
+http://mmsbx.qiniudn.com/@/audio/default-audio.mp3
