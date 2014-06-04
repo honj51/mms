@@ -201,6 +201,12 @@ body {
   max-width: 100%;
   height: auto;
 }
+.mms .qr {
+  clear: both;
+  display: block;
+  float: none;
+  margin: 0 auto;
+}
 .mms-pager .pagination {
   float: right;
 }

@@ -11,4 +11,5 @@ public
 node_modules
 temp/
 npm-debug.log
-./bootstrap/
+./bootstrap
+./bootstrap/*
