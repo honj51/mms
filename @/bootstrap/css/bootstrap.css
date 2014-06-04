@@ -731,7 +731,7 @@ address {
   padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #fcfcfc;
 }
 .list-group-item:first-child {
   border-top-left-radius: 4px;
