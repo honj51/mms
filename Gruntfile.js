@@ -1,15 +1,19 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     concat: {
-      build: {
-        src: ['./@/js/zepto.js', './@/js/event.js', './@/js/ajax.js', './@/js/mms.js'],
-        dest: './@/js/mms.ingbaobei.com.js'
+      basic_and_extras: {
+        files: {
+          './@/js/mms.ingbaobei.com.js': ['./@/js/zepto.js', './@/js/event.js', './@/js/ajax.js', './@/js/mms.js'],
+          './@/js/mms.ingbaobei.com.index.js': ['./@/js/zepto.js', './@/js/event.js', './@/js/ajax.js', './@/js/mms.index.js']
+        },
       }
     },
     uglify: {
-      build: {
-        src: ['./@/js/mms.ingbaobei.com.js'],
-        dest: './@/js/mms.ingbaobei.com.min.js'
+      my_target: {
+        files: {
+          './@/js/mms.ingbaobei.com.min.js': ['./@/js/mms.ingbaobei.com.js'],
+          './@/js/mms.ingbaobei.com.index.min.js': ['./@/js/mms.ingbaobei.com.index.js']
+        }
       }
     }
   });
