@@ -186,51 +186,51 @@ body {
 #page {
   position: relative;
   width: 100%;
-  padding-top: 158.33333333333334%;
+  padding-top: 158.33333333%;
 }
 #page img {
   position: absolute;
   max-width: 100%;
 }
 #mms-mm {
-  top: 2.923976608187134%;
-  left: 14.444444444444443%;
-  width: 85.55555555555556%;
+  top: 2.92397661%;
+  left: 14.44444444%;
+  width: 85.55555556%;
 }
 #record-m {
-  top: 30.760233918128655%;
-  left: 16.296296296296298%;
-  width: 68.88888888888889%;
+  top: 30.76023392%;
+  left: 16.2962963%;
+  width: 68.88888889%;
 }
 #record-r-1 {
-  top: 40.58479532163743%;
-  left: 33.14814814814815%;
-  width: 8.24074074074074%;
+  top: 40.58479532%;
+  left: 33.14814815%;
+  width: 8.24074074%;
 }
 #record-r-2 {
-  top: 40.58479532163743%;
-  left: 58.333333333333336%;
-  width: 8.24074074074074%;
+  top: 40.58479532%;
+  left: 58.33333333%;
+  width: 8.24074074%;
   -ms-transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 #title-png {
-  top: 61.46198830409356%;
+  top: 61.4619883%;
   left: 0%;
   width: 100%;
 }
 #qr-id {
-  top: 78.12865497076024%;
-  left: 6.944444444444445%;
-  width: 90.0925925925926%;
+  top: 78.12865497%;
+  left: 6.94444444%;
+  width: 90.09259259%;
 }
 #audio-box {
   position: absolute;
   display: block;
-  top: 54.97076023391813%;
-  left: 16.296296296296298%;
-  width: 68.88888888888889%;
+  top: 54.97076023%;
+  left: 16.2962963%;
+  width: 68.88888889%;
 }
 #audio-box audio {
   display: block;
