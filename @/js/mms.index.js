@@ -53,9 +53,16 @@ $(function() {
     var perpage = 5;
     active = active === undefined? 1 : parseInt(active, 10);
     // active = 4;
+    maxPage = Math.ceil( indexData.length / perpage);
+    // 避免页码过大
+    if( active > maxPage){
+      active = 1;
+      location.href ="#1";
+    }
     var begin = ( active - 1 ) * perpage;
     var end = active  * perpage;
     var dataLength = indexData.length;
+    var maxPage;
     // console.log(indexData.length);
     pagination.empty();
     mmsListBox.empty();
@@ -70,7 +77,7 @@ $(function() {
     }
 
     pagination.empty();
-    var maxPage = Math.ceil( indexData.length / perpage);
+    // 分页
     if( dataLength > perpage ){
       // console.log("可以分页了。");
       var pageBegin = active-2;
@@ -90,6 +97,9 @@ $(function() {
       if( pageEnd < maxPage ){
         var last =  maxPage
         pagination.append('<li><a href="#'+last+'">..' + last + '</a></li>');
+      } else if( pageEnd === maxPage ){
+        var last =  maxPage
+        pagination.append('<li><a href="#'+last+'">' + last + '</a></li>');
       }
       $page[oldActive] && $page[oldActive].removeClass && $page[oldActive].removeClass('active');
       $page[active].addClass('active');

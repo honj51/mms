@@ -283,10 +283,12 @@ body {
 .pagination > li > span:focus,
 .pagination > li > span:hover {
   color: #741461;
+  border-color: #F881D7;
 }
 .pagination > li > a,
 .pagination > li > span {
   color: #F881D7;
+  border-color: #F881D7;
 }
 a[href^="http://tongji.baidu.com"] {
   position: absolute;
