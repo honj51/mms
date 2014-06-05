@@ -281,3 +281,18 @@ http://mms.ingbaobei.com/qi.html
 然后，``` cnpm install ```
 最后大刀下去
 ``` grunt ``` 即可。 ```Gruntfile.js``` 里面已经写好了 ```default``` 任务了。
+
+
+
+##如何获取远程主分支的代码。
+参考下面的几个步骤，如果有存在冲突，必须在合并完之后先进行冲突后再提交。
+一下为指令：
+```
+git remote -v r-1
+
+git fetch r-1
+
+git merge r-1/master
+
+git status
+```
