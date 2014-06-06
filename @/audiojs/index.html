@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>萌萌说-盈保倍</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    
+    <script src="./audio.min.js"></script>
+    <link rel="stylesheet" href="./index.css?e55635343655" media="screen">
+
+  </head>
+  <body>
+    <div style="width: 60%;margin: 1em auto;">
+      <audio autoplay controls id="audio">
+          <source src="./audio-6.m4a" type="audio/mp4">
+        </audio>
+    </div>
+    
+    <script>
+      audiojs.events.ready(function() {
+        audiojs.createAll();
+      });
+      document.write(screen.width + ',' + document.body.clientWidth)
+    </script>
+  </body>
+</html>

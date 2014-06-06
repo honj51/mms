@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     concat: {
       basic_and_extras: {
         files: {
-          './@/js/mms.ingbaobei.com.js': ['./@/js/zepto.js', './@/js/event.js', './@/js/ajax.js', './@/js/mms.js'],
+          './@/js/mms.ingbaobei.com.js': ['./@/js/zepto.js', './@/js/event.js', './@/js/ajax.js', './@/audiojs/audio.min.js', './@/js/mms.js'],
           './@/js/mms.ingbaobei.com.index.js': ['./@/js/zepto.js', './@/js/event.js', './@/js/ajax.js', './@/js/mms.index.js']
         },
       }

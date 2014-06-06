@@ -23,7 +23,7 @@ $(function() {
   function ajaxGet() {
     // console.log(qi);
     $.ajax({
-      url: './@/qi/' + qi + "/init.json?&random=" + Math.random(),
+      url: './@/qi/' + qi + "/init.json?&random=" + (new Date()).getTime() + "-" + Math.random(),
       success: function(data) {
         // console.log(data);
         window.data1 = data;
@@ -119,7 +119,7 @@ $(function() {
    * @return {null}
    **/
   function createAudio(base, datas) {
-    $audio = $('<audio autoplay controls id="audio" sssssstyle="position:absolute;z-index:-999;left:-100000px;top:-111111px;"></audio>');
+    $audio = $('<audio controls id="audio" style="position:absolute;z-index:-999;left:-100000px;top:-111111px;"></audio>');
     for (var i = datas.length; i--;) {
       var data = datas[i];
       if (data.length === 2) {
@@ -128,21 +128,31 @@ $(function() {
     }
 
     $('#audio-box').empty().append($audio);
-    audio = $audio.get(0);
-    audio && audio.load && audio.load();
-    $audio.on('ended', function() {
-      $('#page').removeClass('play');
+    audiojs.events.ready(function() {
+      audiojs.createAll();
     });
-    $audio.on('stop', function() {
-      $('#page').removeClass('play');
-    });
-    $audio.on('pause', function() {
-      $('#page').removeClass('play');
-    });
-    $audio.on('play', function() {
-      $('#page').addClass('play');
-    });
-    audio && audio.play && audio.play();
+    // $audio = $audio || $('audio');
+    setTimeout(function() {
+      $audio = $('audio');
+      // audio = $audio.get(0) || $('audio').get(0);
+      audio = $audio.get(0);
+      audio && audio.load && audio.load();
+      $audio.on('ended', function() {
+        $('#page').removeClass('play');
+      });
+      $audio.on('stop', function() {
+        $('#page').removeClass('play');
+      });
+      $audio.on('pause', function() {
+        $('#page').removeClass('play');
+      });
+      $audio.on('play', function() {
+        $('#page').addClass('play');
+      });
+      // audio && audio.play && audio.play();
+    }, 2000)
+
+    // $('#page').addClass('play');
     /**
      * @name playAudio
      * @desc 自动播放音频
@@ -150,7 +160,7 @@ $(function() {
      * @return {null}
      **/
     function playAudio() {
-      if (audio.currentTime <= 0) {
+      if ( audio && audio.currentTime && audio.currentTime <= 0) {
         setTimeout(function() {
           playAudio();
         }, 500);
