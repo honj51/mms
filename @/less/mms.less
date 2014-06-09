@@ -109,23 +109,33 @@ body{
 }
 // @roundName: round;
 // @animation: @roundName 5s;
+@animationDuration: 3s;
 .play{
   #record-r-1, #record-r-2{
     -webkit-animation-name: round;
-    -webkit-animation-duration: 10s;
+    -webkit-animation-duration: @animationDuration;
     -webkit-animation-timing-function: linear;
     -webkit-animation-delay: 0s;
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
+    // -webkit-animation-direction: alternate; //是否应该轮流反向播放动画。
     -webkit-animation-play-state: running;
 
     animation-name: round;
-    animation-duration: 10s;
+    animation-duration: @animationDuration;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    // animation-direction: alternate; //是否应该轮流反向播放动画。
     animation-play-state: running;
+
+
+
+    // @rotateDeg: 9deg;
+    // transform:rotate(@rotateDeg);
+    // -ms-transform:rotate(@rotateDeg);
+    // -moz-transform:rotate(@rotateDeg);
+    // -webkit-transform:rotate(@rotateDeg);
+    // -o-transform:rotate(@rotateDeg);
   }
   #record-r-2{
     -webkit-animation-name: round2;
@@ -137,40 +147,52 @@ body{
   -webkit-transform: rotate(@deg);
   transform: rotate(@deg);
 }
-.keyframes(@from: 0deg, @to: 359deg){
-  0%{
+.keyframes(@from: 0deg, @to: 360deg){
+  from{
     .transform(@from);
   }
-  1%{
-    .transform(@from);
-  }
-  49%{
+  // 0%{
+  //   .transform(@from);
+  // }
+  // 1%{
+  //   .transform(@from);
+  // }
+  // 49%{
+  //   .transform(@to);
+  // }
+  // 50%{
+  //   .transform(@from);
+  // }
+  // 99%{
+  //   .transform(@to);
+  // }
+  // 99.999999999%{
+  //   .transform(@to);
+  // }
+  // 100%{
+  //   .transform(@from);
+  // }
+  to{
     .transform(@to);
-  }
-  50%{
-    .transform(@from);
-  }
-  99%{
-    .transform(@to);
-  }
-  99.999999999%{
-    .transform(@to);
-  }
-  100%{
-    .transform(@from);
   }
 }
 @-webkit-keyframes round{
-  .keyframes(0deg, 600deg);
+  // .keyframes(0deg, 600deg);
+  .keyframes();
 }
 @keyframes round{
-  .keyframes(0deg, 600deg);
+  // .keyframes(0deg, 600deg);
+  .keyframes();
 }
 @-webkit-keyframes round2{
-  .keyframes(-90deg, 510deg);
+  // .keyframes(-90deg, 510deg);
+  .keyframes(-90deg, 270deg);
+  // .keyframes();
 }
 @keyframes round2{
-  .keyframes(-90deg, 510deg);
+  // .keyframes(-90deg, 510deg);
+  .keyframes(-90deg, 270deg);
+  // .keyframes();
 }
 // @keyframes round{
 //   form {
