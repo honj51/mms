@@ -2,7 +2,7 @@ mms
 ===
 
 萌萌说保险。 [mms.ingbaobei.com](http://mms.ingbaobei.com/index.html)  
-这个是github 上面的查看地址 [ingbaobeigroup.github.io/mms/](http://ingbaobeigroup.github.io/mms/)   [mmstest.ingbaobei.com/](http://mmstest.ingbaobei.com/)  
+这个是github 上面的查看地址 [ingbaobeigroup.github.io/mms/](http://ingbaobeigroup.github.io/mms/)     
 
 ------
 
