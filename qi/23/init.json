@@ -7,8 +7,8 @@
   "app": "mms",
   "title": "致我们无处安放的人民币",
   "titleEnd": "-萌萌说-盈保倍",
-  "titlePng": "./@/qi/23/title.png",
+  "titlePng": "qi/23/title.png",
   "audios": [
-    ["audio/mp4","./@/qi/23/audio.m4a"]
+    ["audio/mp4","qi/23/audio.m4a"]
   ]
 }

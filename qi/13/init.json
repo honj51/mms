@@ -7,8 +7,8 @@
   "app": "mms",
   "title": "夏天来啦，咱们漂流去！",
   "titleEnd": "-萌萌说-盈保倍",
-  "titlePng": "./@/qi/13/title.png",
+  "titlePng": "qi/13/title.png",
   "audios": [
-    ["audio/mp4","./@/qi/13/audio.m4a"]
+    ["audio/mp4","qi/13/audio.m4a"]
   ]
 }

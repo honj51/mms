@@ -7,8 +7,8 @@
   "app": "mms",
   "title": "等灰机，满眼都是泪",
   "titleEnd": "-萌萌说-盈保倍",
-  "titlePng": "./@/qi/20/title.png",
+  "titlePng": "qi/20/title.png",
   "audios": [
-    ["audio/mp4","./@/qi/20/audio.m4a"]
+    ["audio/mp4","qi/20/audio.m4a"]
   ]
 }

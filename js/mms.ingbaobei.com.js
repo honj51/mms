@@ -1996,7 +1996,7 @@ $(function() {
   function ajaxGet() {
     // console.log(qi);
     $.ajax({
-      url: './@/qi/' + qi + "/init.json?&random=" + (new Date()).getTime() + "-" + Math.random(),
+      url: 'qi/' + qi + "/init.json?&random=" + (new Date()).getTime() + "-" + Math.random(),
       success: function(data) {
         // console.log(data);
         window.data1 = data;
@@ -2011,12 +2011,12 @@ $(function() {
           $mms[0].src = baseUrl + data.mmsPng;
 
           $mms.on('error', function() {
-            $mms[0].src = './@/icon/mms-mm.png';
+            $mms[0].src = 'icon/mms-mm.png';
           })
         } else if( data.theme === undefined ){
           // 如果没写主题的话，就采用这个默认皮肤
           // 大喇叭
-          $mms[0].src = './@/icon/mms-mm.png';
+          $mms[0].src = 'icon/mms-mm.png';
         }
 
         // title图片
@@ -2025,12 +2025,12 @@ $(function() {
           $titlePng[0].src = baseUrl + data.titlePng;
 
           $titlePng.on('error', function() {
-            $titlePng[0].src = './@/icon/title-default.png';
+            $titlePng[0].src = 'icon/title-default.png';
           })
         } else if( data.theme === undefined ){
           // 如果没写主题的话，就采用这个默认皮肤
           // title图片
-          $titlePng[0].src = './@/icon/title-default.png';
+          $titlePng[0].src = 'icon/title-default.png';
         }
 
         // qr图片
@@ -2039,12 +2039,12 @@ $(function() {
           $qrPng[0].src = baseUrl + data.qrPng;
 
           $qrPng.on('error', function() {
-            $qrPng[0].src = './@/icon/qr-id.png';
+            $qrPng[0].src = 'icon/qr-id.png';
           })
         } else if( data.theme === undefined ){
           // 如果没写主题的话，就采用这个默认皮肤
           // qr图片
-          $qrPng[0].src = './@/icon/qr-id.png';
+          $qrPng[0].src = 'icon/qr-id.png';
         }
 
         if (data.bgColor) {
@@ -2056,7 +2056,7 @@ $(function() {
 
         // 如果主题文件写了，就直接添加成为主题文件
         if(data.theme !== undefined){
-          $.get('./@/theme/'+data.theme+'/theme.js',"",function( data ) {
+          $.get('theme/'+data.theme+'/theme.js',"",function( data ) {
             new Function(data)();
           }, "text/javascript");
           // $('body').append('<script type="text/javascript" src="./@/theme/'+data.theme+'/theme.js"></script>');
