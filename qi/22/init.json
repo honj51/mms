@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "22",
+  "theme": "5",
+  "date": "2014/06/28",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "养老这个沉重的话题",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/22/title.png",
+  "audios": [
+    ["audio/mp4","qi/22/audio.m4a"]
+  ]
+}
