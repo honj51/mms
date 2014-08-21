@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "21",
+  "theme": "5",
+  "date": "2014/06/27",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "“龅牙苏”来啦!",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "./@/qi/21/title.png",
+  "audios": [
+    ["audio/mp4","./@/qi/21/audio.m4a"]
+  ]
+}

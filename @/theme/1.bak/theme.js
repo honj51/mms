@@ -2,7 +2,7 @@ $(function() {
   // 主题编号，一定要对应文件夹名字
   var theme = '1';
   // 背景颜色
-  var bgc = '#b3e1e7';
+  var bgc = '#ffba33';
 
   $('body').css({
     "background": bgc
