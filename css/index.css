@@ -1155,8 +1155,7 @@ body {
   color: white;
 }
 .mms-list .list-group-item:active,
-.mms-list .list-group-item:focus,
-.mms-list .list-group-item:hover {
+.mms-list .list-group-item:focus {
   background-color: inherit;
   background-image: -moz-radial-gradient(top center, circle, #c0cde6, #ca95b6 10%, #c34455 30%, #b81013 50%, #950e0e);
   background-image: -webkit-radial-gradient(top center, circle, #c0cde6, #ca95b6 10%, #c34455 30%, #b81013 50%, #950e0e);
@@ -1164,11 +1163,21 @@ body {
 }
 .mms-list .list-group-item:active,
 .mms-list .list-group-item:focus,
-.mms-list .list-group-item:hover,
 .mms-list .list-group-item:active .list-group-item-heading,
-.mms-list .list-group-item:focus .list-group-item-heading,
-.mms-list .list-group-item:hover .list-group-item-heading {
+.mms-list .list-group-item:focus .list-group-item-heading {
   color: white;
+}
+@media (min-width: 321px) {
+  .mms-list .list-group-item:hover {
+    background-color: inherit;
+    background-image: -moz-radial-gradient(top center, circle, #c0cde6, #ca95b6 10%, #c34455 30%, #b81013 50%, #950e0e);
+    background-image: -webkit-radial-gradient(top center, circle, #c0cde6, #ca95b6 10%, #c34455 30%, #b81013 50%, #950e0e);
+    background-image: radial-gradient(top center, circle, #c0cde6, #ca95b6 10%, #c34455 30%, #b81013 50%, #950e0e);
+  }
+  .mms-list .list-group-item:hover,
+  .mms-list .list-group-item:hover .list-group-item-heading {
+    color: white;
+  }
 }
 .mms-pager {
   margin-top: 1em;

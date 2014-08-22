@@ -18,7 +18,9 @@ module.exports = function(grunt) {
     },
     less: {
       production: {
+        options: { paths: [''], compress: true, yuicompress: true },
         files: {
+          // 想要最新的css，必须先从less编译为css，没写less任务，从考拉编译
           'css/qi.min.css': ['css/qi.css'],
           'css/index.min.css': ['css/index.css']
         }
