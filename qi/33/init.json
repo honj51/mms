@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "33",
+  "theme": "5",
+  "date": "2014/07/11",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "扶不扶，不再是问题！",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/33/title.png",
+  "audios": [
+    ["audio/mp4","qi/33/audio.m4a"]
+  ]
+}
