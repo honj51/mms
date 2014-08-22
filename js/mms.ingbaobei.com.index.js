@@ -1492,6 +1492,21 @@ $(function() {
   $('.marker-loading').show();
   var indexData;
   var getIndexDataTime = 0;
+  
+  // 七牛的cdn，用于音频加快，一般音频就不会修改的。
+  var cdnBase = '';
+  var host = location.host
+  if( host === 'mms.ingbaobei.com' ){
+    cdnBase = '//ibbmms.qiniudn.com/';
+  } else {
+    // 域名跳转
+    setTimeout(function(){
+      if(/^(\d+\.){3}\d+(\:\d+){0,1}$/.test(location.host) === false){
+        location.href = '//mms.ingbaobei.com';
+      }
+    },100);
+  }
+
   /**
    * @name getIndexData
    * @desc 获取主页数据
