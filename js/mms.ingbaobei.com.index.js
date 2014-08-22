@@ -1502,6 +1502,7 @@ $(function() {
     $.ajax({
       url: "qi/index.all.json?&random=" + (new Date()).getTime() + "-" + Math.random(),
       data: "",
+      dataType: "json",
       success: function( data) {
         indexData = data;
         window.indexData = data;

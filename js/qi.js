@@ -23,6 +23,7 @@ $(function() {
   function ajaxGet() {
     // console.log(qi);
     $.ajax({
+      dataType: "json",
       url: 'qi/' + qi + "/init.json?&random=" + (new Date()).getTime() + "-" + Math.random(),
       success: function(data) {
         // console.log(data);
