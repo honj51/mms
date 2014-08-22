@@ -15,12 +15,21 @@ module.exports = function(grunt) {
           'js/mms.ingbaobei.com.index.min.js': ['js/mms.ingbaobei.com.index.js']
         }
       }
+    },
+    less: {
+      production: {
+        files: {
+          'css/qi.min.css': ['css/qi.css'],
+          'css/index.min.css': ['css/index.css']
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
-  grunt.registerTask('default', ['concat', 'uglify']);
+  grunt.registerTask('default', ['concat', 'uglify', 'less']);
 
 };

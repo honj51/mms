@@ -273,7 +273,7 @@ http://mms.ingbaobei.com/qi.html
 
 
 ##怎么开发这个？
-项目的 css 采用的是 less 编写，使用 [koala](http://koala-app.com/) 进行编译。
+项目的 css 采用的是 less 编写，使用 [koala](http://koala-app.com/) 进行编译。min 版本使用 grunt 压缩，
 然后 js 是使用 grunt 进行 构建的，开发版本可以使用单独的 js 引入进行开发。
 生产版本必须安装环境，然后构建。
 安装环境
