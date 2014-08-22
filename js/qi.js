@@ -1,5 +1,19 @@
 $(function() {
 
+  // 七牛的cdn，用于音频加快，一般音频就不会修改的。
+  var cdnBase = '';
+  var host = location.host
+  if( host === 'mms.ingbaobei.com' ){
+    cdnBase = '//ibbmms.qiniudn.com/';
+  } else {
+    // 域名跳转
+    setTimeout(function(){
+      if(/^(\d+\.){3}\d+(\:\d+){0,1}$/.test(location.host) === false){
+        location.href = '//mms.ingbaobei.com';
+      }
+    },100);
+  }
+
   $('.marker-loading').show();
 
   var href = location.href;
@@ -23,6 +37,7 @@ $(function() {
   function ajaxGet() {
     // console.log(qi);
     $.ajax({
+      dataType: "json",
       url: 'qi/' + qi + "/init.json?&random=" + (new Date()).getTime() + "-" + Math.random(),
       success: function(data) {
         // console.log(data);
@@ -126,7 +141,11 @@ $(function() {
     for (var i = datas.length; i--;) {
       var data = datas[i];
       if (data.length === 2) {
-        $audio.append('<source src="' + base + data[1] + '" type="' + data[0] + '">');
+        if( base === "") {
+          $audio.append('<source src="' + cdnBase + data[1] + '" type="' + data[0] + '">');
+        } else {
+          $audio.append('<source src="' + base + data[1] + '" type="' + data[0] + '">');
+        }
       }
     }
 
