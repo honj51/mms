@@ -1,0 +1,229 @@
+@import url(normalize.less);
+@import url(../bootstrap/css/bootstrap.less);
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix {
+  .clearfix();
+}
+
+@bodyBGC: #b3e1e7;
+@listBGC: #730f0f;
+
+body{
+  background-color: @bodyBGC;
+  // width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  position: relative;
+  font-family: "Microsoft YaHei", "微软雅黑", "WenQuanYi Micro Hei", "Lucida Grande", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial,"Hiragino Sans GB","Hiragino Sans GB W3", sans-serif;
+  // font-size: 66.7%;
+}
+@pageBaseHeight: 1710;
+
+.mms-top{
+  width: 100%;
+  width: 100% * (978 / 1080);
+  // width: 320px;
+  margin: auto;
+  position: relative;
+  // top: 100% * (44 / 1920);
+  margin-top: 1em;
+  left: 100% * (18 / 1080);
+  img{
+    float: right;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.mms-eye{
+  // width: 100%;
+  width: 100% * (156 / 1080);
+  // width: 47px;
+  position: relative;
+  // top: 100% * (44 / 1920);
+  margin-top: .3em;
+  left: 100% * (27 / 1080);
+  img{
+    float: right;
+    max-width: 100%;
+    height: auto;
+  }
+}
+@mmsListWidth: 914;
+@borderWhiteColor: #e8dde6;
+.mms-list-warper{
+  width: 100% * (@mmsListWidth / 1080);
+  position: relative;
+  top: -125px * ( 320 / 1080);
+  margin-bottom: -125px * ( 320 / 1080);
+  left: 100% * (117 / 1080);
+}
+.mms-list{
+  // box-sizing: content-box;
+  width: 100%;
+  // width: 230px;
+  // padding: 100% * ( 10 / @mmsListWidth );
+  padding: 4px;
+  // border: ( 22px * (320 / 1080) ) solid #e8dde6;
+  border: 7px solid @borderWhiteColor;
+  border-radius: 5px;
+  background-color: @listBGC;
+
+  img.loading{
+    display: block;
+    margin: 1em auto;
+  }
+
+  .list-group{
+    padding: 0;
+    margin: 0;
+  }
+  .list-group-item{
+    background-color: inherit;
+    // padding: 5px 15px;
+    padding: 5px 3px;
+    border: 0;
+    border-bottom: .2em solid #4a0909;
+    border-radius: 0;
+    &, .list-group-item-heading{
+      color: white;
+    }
+  }
+  .list-group-item:last-child{
+    border-bottom: 0;
+  }
+  .list-group-item:hover, .list-group-item:focus {
+    background-color: inherit;
+    &, .list-group-item-heading{
+      color: white;
+    }
+  }
+}
+
+.mms-pager{
+  margin-top: 1em;
+  text-align: right;
+}
+
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+.marker{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  display: none;
+  overflow: auto;
+  overflow-y: hidden;
+  background-color: rgba(51,51,51,.5);
+  width: 100%;
+  height: 100%;
+  .loading{
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-left: -80px;
+    margin-top: -80px;
+  }
+  .desc{
+    width: 160px;
+    // height: 100px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -80px;
+  }
+}
+
+
+
+
+.pagination{
+  // border: ( 11px * (320 / 1080) ) solid #e8dde6;
+  border: 4px solid @borderWhiteColor;
+  background-color: @listBGC;
+  > li > a, > li.active > a{
+    border: 0;
+    border-right: 2px solid @borderWhiteColor;
+    color: white;
+    font-style: italic
+  }
+  > li:last-child > a, > li:last-child.active > a{
+    border: 0;
+    border-right: 0;
+    color: white;
+    font-style: italic
+  }
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span {
+  margin-left: 0;
+  border-radius: 0;
+  // border: 0;
+}
+.mms-pager .pagination{
+  margin: 0px;
+}
+
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover {
+  // background-color: #F881D7;
+  // border-color: #F881D7;
+  background-color: inherit;
+}
+
+.pagination>li>a:focus, 
+.pagination>li>a:hover, 
+.pagination>li>span:focus, 
+.pagination>li>span:hover {
+  // color: #741461;
+  // border-color: #F881D7;
+  color: white;
+  background-color: inherit;
+}
+
+.pagination>li>a, 
+.pagination>li>span {
+  // color: #F881D7;
+  // border-color: #F881D7;
+  background-color: inherit;
+}
+
+a[href^="http://tongji.baidu.com"]{
+  position:absolute;
+  display: block;
+  z-index:-999;
+  left:-100000px;
+  top:-111111px;
+}
+
+
+
+

@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.audiojs audio {
+  position: absolute;
+  left: -100%;
+}
+.audiojs {
+  position: relative;
+  /*width: 460px;*/
+  width: 90%;
+  margin: 0 auto;
+  /*height: 36px;*/
+  height: 2em;
+  background: #404040;
+  overflow: hidden;
+  font-family: monospace;
+  border-radius: 5px;
+  /*font-size: 12px;*/
+  /*font-size: 36px;*/
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e77979), color-stop(0.5, #c23d3d), color-stop(0.51, #c03939), color-stop(1, #f37373));
+  background: -moz-linear-gradient(center top, #c53030 0%, #c92929 50%, #b14141 51%, #e11f1f 100%) repeat scroll 0% 0% #b04949;
+  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
+.audiojs .play-pause {
+  /*width: 25px;*/
+  width: 10%;
+  /*height: 40px;*/
+  height: 2em;
+  /*padding: 4px 6px;*/
+  /*margin: 0px;*/
+  float: left;
+  overflow: hidden;
+  /*border-right: 1px solid #000;*/
+}
+.audiojs p {
+  display: none;
+  /*width: 25px;*/
+  width: 100%;
+  /*height: 40px;*/
+  height: 2em;
+  margin: 0px;
+  cursor: pointer;
+}
+.audiojs .play {
+  display: block;
+}
+.audiojs .scrubber {
+  position: relative;
+  float: left;
+  /*width: 280px;*/
+  width: 60%;
+  background: #5a5a5a;
+  /*height: 14px;*/
+  height: 1.2em;
+  margin-top: .4em;
+  /*margin: 10px;*/
+  /*border-top: 1px solid #3f3f3f;*/
+  /*border-left: 0px;*/
+  /*border-bottom: 0px;*/
+  overflow: hidden;
+}
+.audiojs .progress {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /*height: 14px;*/
+  height: 1.2em;
+  width: 0px;
+  background: #ccc;
+  z-index: 1;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cccccc), color-stop(0.5, #dddddd), color-stop(0.51, #cccccc), color-stop(1, #cccccc));
+  background-image: -moz-linear-gradient(center top, #cccccc 0%, #dddddd 50%, #cccccc 51%, #cccccc 100%);
+}
+.audiojs .loaded {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /*height: 14px;*/
+  height: 1.2em;
+  width: 0px;
+  background: #9B2B2B;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f6baba), color-stop(0.5, #e04b4b), color-stop(0.51, #c42929), color-stop(1, #f69797));
+  background: -moz-linear-gradient(center top, #f89f9f 0%, #c04343 50%, #f87171 51%, #f55959 100%) repeat scroll 0% 0% #f39090;
+}
+.audiojs .time {
+  float: left;
+  /*height: 36px;*/
+  height: 2em;
+  width: 30%;
+  /*line-height: 36px;*/
+  line-height: 2em;
+  /*margin: 0px 0px 0px 6px;*/
+  /*padding: 0px 6px 0px 12px;*/
+  /*border-left: 1px solid #000;*/
+  color: #ddd;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.audiojs .time em {
+  /*padding: 0px 2px 0px 0px;*/
+  color: #f9f9f9;
+  font-style: normal;
+  font-size: 66%;
+}
+.audiojs .time strong {
+  /*padding: 0px 0px 0px 2px;*/
+  font-weight: normal;
+  font-size: 66%;
+}
+.audiojs .error-message {
+  float: left;
+  display: none;
+  /*margin: 0px 10px;*/
+  /*height: 36px;*/
+  /*width: 400px;*/
+  width: 86%;
+  height: 3em;
+  font-size: 66%;
+  line-height: 3em;
+  overflow: hidden;
+  /*line-height: 36px;*/
+  white-space: nowrap;
+  color: #fff;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -icab-text-overflow: ellipsis;
+  -khtml-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+}
+.audiojs .error-message a {
+  color: #eee;
+  text-decoration: none;
+  /*padding-bottom: 1px;*/
+  /*border-bottom: 1px solid #999;*/
+  white-space: wrap;
+}
+.audiojs .play {
+  background: url("play.gif") 50% 50% no-repeat;
+  background-size: 1.5em 1.5em;
+}
+/*.audiojs .loading {
+  background: url("./loading.gif") 50% 50% no-repeat;
+  background-size: 1.5em 1.5em;
+}*/
+.audiojs .loading {
+  background: url("play.gif") 50% 50% no-repeat;
+  background-size: 1.5em 1.5em;
+}
+.audiojs .error {
+  background: url("close.gif") 50% 50% no-repeat;
+  background-size: 1.5em 1.5em;
+}
+.audiojs .pause {
+  background: url("pause.gif") 50% 50% no-repeat;
+  background-size: 1.5em 1.5em;
+}
+.playing .play,
+.playing .loading,
+.playing .error {
+  display: none;
+}
+.playing .pause {
+  display: block;
+}
+.loading .play,
+.loading .pause,
+.loading .error {
+  display: none;
+}
+.loading .loading {
+  display: block;
+}
+.error .time,
+.error .play,
+.error .pause,
+.error .scrubber,
+.error .loading {
+  display: none;
+}
+.error .error {
+  display: block;
+}
+.error .play-pause p {
+  cursor: auto;
+}
+.error .error-message {
+  display: block;
+}

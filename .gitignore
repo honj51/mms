@@ -12,4 +12,3 @@ node_modules
 temp/
 npm-debug.log
 bootstrap.build/
-@.bak/

@@ -2,7 +2,7 @@ mms
 ===
 
 萌萌说保险。 [mms.ingbaobei.com](http://mms.ingbaobei.com/index.html)  
-这个是github 上面的查看地址 [ingbaobeigroup.github.io/mms/](http://ingbaobeigroup.github.io/mms/)   [mmstest.ingbaobei.com/](http://mmstest.ingbaobei.com/)  
+这个是github 上面的查看地址 [ingbaobeigroup.github.io/mms/](http://ingbaobeigroup.github.io/mms/)    
 
 ------
 
@@ -19,7 +19,7 @@ mms
 
 1、保存到本地  
 ```
-git clone git://github.com/ingbaobeigroup/mms.git  
+git clone https://github.com/ingbaobeigroup/mms.git  
 ```
 
 2、到当前目录下面，使用静态文件存储，进行发布。  
@@ -49,50 +49,53 @@ $ anywhere 80
 \mms
   index.html: 主页，不用解释。
   qi.html: 萌萌说第几期详情页面。
-  \@
-    \audio: 基本上没用了的赶脚
-    \css: css的文件夹
-      mms.css: 网站开发css
-      mms.min.css: 网站压缩css
-    \icon: 存放图片的
-      loading.gif: 加载中png
-      record-m.png: 收音机
-      record-r.png: 收音机转动的
-      mms-logo.png: 朋友圈分享的logo
-      mms-mm.png: 默认png
-      qr-id.png: 默认png
-      title-default.png: 默认png
-    \js: js文件夹
-      zepto.js: zepto 库主要文件
-      event.js: zepto 的事件js
-      ajax.js: zepto 的ajax js
-      mms.js: 萌萌说 qi.html 的js 
-      mms.ingbaobei.com.js:萌萌说 qi.html 的js，开发版本，统一上面四个文件 
-      mms.ingbaobei.com.min.js:萌萌说 qi.html 的js，生产版本，统一上面四个文件 
-    \less:
-      normalize.less: 大神的 normalize ，从bootstrap抄下来的。
-      mms.less: 萌萌说 qi.html 的css
-    \theme: 萌萌说主题文件，加紧了主题，就不需要进行每次都进行切图了。
-      \1: 主题1。
-      \2: 主题2。
-      \3: 主题3。
-      \4: 主题4。
-      \5: 主题5。
-        mms.png: 大喇叭的图片。
-        qr.png: 二维码的图片。
-        theme.js: 主题的配置文件。
-    \qi: 每次更新一期萌萌说，都要往里面更新数据啊。
-      \latest: 最新版本萌萌说的信息获取的地方，适用于 qi.html 页面， 如果url 为 qi.html?qi=3 之类的就不适用了。
-        init.json: 上面文件夹说明一切
-      \3: 第三期版本的资源文件
-        init.json: 第三期版本的数据文件
-        audio.m4a: 第三期版本的 m4a 格式音频
-        title.png: 这一期的那个版本png title。
-      index.all.json: 暂时还没用到，不过也要写进去
+  \audio: 基本上没用了的赶脚
+  \css: css的文件夹
+    qi.css: qi.html css
+    qi.min.css: qi.html 压缩css
+    index.css: index.html css
+    index.css: index.html 压缩 css
+  \icon: 存放图片的
+    loading.gif: 加载中png
+    mms-logo.png: 朋友圈分享的logo
+    mms-mm.png: 默认png
+    qr-id.png: 默认png
+    title-default.png: 默认png
+  \js: js文件夹
+    zepto.js: zepto 库主要文件
+    event.js: zepto 的事件js
+    ajax.js: zepto 的ajax js
+    qi.js: 萌萌说 qi.html 的js 
+    mms.ingbaobei.com.qi.js:萌萌说 qi.html 的js，开发版本，统一上面四个文件 
+    mms.ingbaobei.com.qi.min.js:萌萌说 qi.html 的压缩 js，生产版本，统一上面四个文件
+    index.js: 萌萌说 index.html 的js 
+    mms.ingbaobei.com.index.js:萌萌说 index.html 的js，开发版本，统一上面四个文件 
+    mms.ingbaobei.com.index.min.js:萌萌说 index.html 的压缩 js，生产版本，统一上面四个文件 
+  \less:
+    normalize.less: 大神的 normalize ，从bootstrap抄下来的。
+    qi.less: 萌萌说 qi.html 的css
+    index.less: 萌萌说 qi.html 的css
+  \theme: 萌萌说主题文件，加紧了主题，就不需要进行每次都进行切图了。
+    \1: 主题1。
+    \2: 主题2。
+    \3: 主题3。
+    \4: 主题4。
+    \5: 主题5。
+      mms.png: 大喇叭的图片。
+      qr.png: 二维码的图片。
+      theme.js: 主题的配置文件。
+  \qi: 每次更新一期萌萌说，都要往里面更新数据啊。
+    \latest: 最新版本萌萌说的信息获取的地方，适用于 qi.html 页面， 如果url 为 qi.html?qi=3 之类的就不适用了。
+      init.json: 上面文件夹说明一切
+    \3: 第三期版本的资源文件
+      init.json: 第三期版本的数据文件
+      audio.m4a: 第三期版本的 m4a 格式音频
+      title.png: 这一期的那个版本png title。
+    index.all.json: 暂时还没用到，不过也要写进去
 ```
 ##发布一个主题
 ```
-  \mms\@\theme\
+  \mms\theme\
     \主题名
       mms.png: 大喇叭的图片。
       qr.png: 二维码的图片。
@@ -110,21 +113,21 @@ $(function() {
   // 背景颜色
   var bgc = '#ffcc99'; 
 
-  $('body').css({
+  $('html, body').css({
     "background": bgc
   })
   // 大喇叭
   var $mms = $('#mms-mm');
-  $mms[0].src = '/@/theme/' + theme + '/mms.png';
+  $mms[0].src = 'theme/' + theme + '/mms.png';
   $mms.on('error', function() {
-    $mms[0].src = './@/icon/mms-mm.png';
+    $mms[0].src = 'icon/mms-mm.png';
   })
 
   // qr图片
   var $qrPng = $('#qr-id');
-  $qrPng[0].src = '/@/theme/' + theme + '/qr.png';
+  $qrPng[0].src = 'theme/' + theme + '/qr.png';
   $qrPng.on('error', function() {
-    $qrPng[0].src = './@/icon/qr-id.png';
+    $qrPng[0].src = 'icon/qr-id.png';
   })
 })
 ```
@@ -160,16 +163,16 @@ var bgc = '#0f0';
 
 上面提到的文件架构里面 
 
-```\@\qi\``` 是用于发布新一期版本的。所以每次发布的时候都在这下面进行发布。每一次发布的期数必须是数字，因为程序里面做了限制。
+```\qi\``` 是用于发布新一期版本的。所以每次发布的时候都在这下面进行发布。每一次发布的期数必须是数字，因为程序里面做了限制。
 
-例如发布第 99999 期版本。首先在 ```\@\qi\``` 下面创建一个 ```99999``` 的文件夹，然后仿照第三期的文件结构，进行搭建资源，放进以下几个属于新一期萌萌说的资源文件
+例如发布第 99999 期版本。首先在 ```\qi\``` 下面创建一个 ```99999``` 的文件夹，然后仿照第三期的文件结构，进行搭建资源，放进以下几个属于新一期萌萌说的资源文件
 ```
 init.json: 第 99999 期版本 的数据文件
 audio.mp3: 第 99999 期版本 的 mp3 格式音频
 audio.ogg: 第 99999 期版本 的 ogg 格式音频
 title.png:  第 99999 期版本 这一期的那个版本png title。
 ```
-特别注意的是：可能不是每一天都进行风格的变动，所以会有一个默认的 风格，就是 ```\@\icon\``` 里面的那几张 ```png```，是和第三期基本相同的风格来的。所以能够不进行 png 的资源处理。
+特别注意的是：可能不是每一天都进行风格的变动，所以会有一个默认的 风格，就是 ```\icon\``` 里面的那几张 ```png```，是和第三期基本相同的风格来的。所以能够不进行 png 的资源处理。
 后面将陆续把不同的风格进行设置进去。
  
 发布版本，需要进行 数据文件的修改，就是刚刚 99999 的那个文件夹里面的 ```init.json``` 的数据的修改，改为如下的形式 注意 ```//``` 后面为注释，不要写进去啊啊。
@@ -184,7 +187,7 @@ title.png:  第 99999 期版本 这一期的那个版本png title。
   "app": "mms", // app名字，默认 mms
   "title": "爱情那点事儿~", // 这一期的title前缀，每期都不同
   "titleEnd": "萌萌说-盈保倍", // 这一期的title后缀，默认这样子
-  "titlePng": "title.png", // 这一期的title 图片，就是上面的那个 title.png 的名字，反正名字你随便修，写进这里能正确访问进行了。 可以不写，会使用 ```/@/icon/title-default.png``` 的默认图片。
+  "titlePng": "title.png", // 这一期的title 图片，就是上面的那个 title.png 的名字，反正名字你随便修，写进这里能正确访问进行了。 可以不写，会使用 ```icon/title-default.png``` 的默认图片。
   "audios": [
     ["audio/mp4","audio.m4a"],
     ["audio/mpeg","audio.mp3"],
@@ -195,8 +198,8 @@ title.png:  第 99999 期版本 这一期的那个版本png title。
 
 写完了这个 ```json``` 文件之后，保存啦。
 
-然后为了统一最新版本的， 把这个最新发布的版本里面的刚刚这个 ```init.json``` 文件复制到 ```/@/qi/latest``` 文件里面，替换原来的，替换之前先备份，不然出错没地方改回来，统一下备份的格式吧，改名改成 ```init.bak.版本号.json```，例如 99999 版本的 是 ```init.bak.99999.json```。。。。。
-还有一个地方，需要写进 ```/@/qi/index.all.json``` 里面，后期会用到的。
+然后为了统一最新版本的， 把这个最新发布的版本里面的刚刚这个 ```init.json``` 文件复制到 ```qi/latest``` 文件里面，替换原来的，替换之前先备份，不然出错没地方改回来，统一下备份的格式吧，改名改成 ```init.bak.版本号.json```，例如 99999 版本的 是 ```init.bak.99999.json```。。。。。
+还有一个地方，需要写进 ```qi/index.all.json``` 里面，后期会用到的。
 把这个 json 的最前面，增加一个数据元：
 ```javascript
 {
@@ -228,7 +231,7 @@ http://你的ip/qi.html?qi=99999
 
 ##发布到主页
 刚刚是发布了一起萌萌说了，那在 ```index.html``` 里面没有看到是吧。那就把数据添加进去吧。
-打开 ```/mms/@/qi/index.all.json``` 能看到一大堆的东西是吧。
+打开 ```/mms/qi/index.all.json``` 能看到一大堆的东西是吧。
 按照这种格式。
 ```
 {
@@ -244,10 +247,9 @@ http://你的ip/qi.html?qi=99999
 ok测试成功的话，提交到七牛对应的地址，然后刷新网址就行。
 
 ##发布
-刚刚本地发布了第 ```99999``` 的萌萌说，然后就发布七牛上吧，让全世界的人都看到。
-登录七牛，选择 萌萌说保险的那个空间，然后根据 文件地址发布就行了。
+刚刚本地发布了第 ```99999``` 的萌萌说，然后就发布七牛上吧，让全世界的人都看到。合并到主分支即可。
 
-例如 ```/qi/99999/``` 里面的资源，选择上传，输入前缀 ```/qi/99999/```，注意不用管那个 ```@```，七牛自动补全这个 ```@``` 的。
+例如 ```/qi/99999/``` 里面的资源，选择上传，输入前缀 ```/qi/99999/```。
 然后覆盖 ```/qi/latest/``` 里面的，记得覆盖之前要删除了，才能覆盖。
 
 最后一步就是清空缓存了。点击 ```空间设置``` -> ```高级设置``` ，缓存刷新 里面有个 ```去刷新``` 这样子一个按钮是吧，点击，文本方式 打开 工程根目录 下面的那个 ```clearcache``` ，复制第一个空行之上的所有东西，黏贴进去，确定，行了。
@@ -271,7 +273,7 @@ http://mms.ingbaobei.com/qi.html
 
 
 ##怎么开发这个？
-项目的 css 采用的是 less 编写，使用 [koala](http://koala-app.com/) 进行编译。
+项目的 css 采用的是 less 编写，使用 [koala](http://koala-app.com/) 进行编译。min 版本使用 grunt 压缩，
 然后 js 是使用 grunt 进行 构建的，开发版本可以使用单独的 js 引入进行开发。
 生产版本必须安装环境，然后构建。
 安装环境
@@ -296,3 +298,17 @@ git merge r-1/master
 
 git status
 ```
+
+
+版本：
+
+v2.0.0
+转移到本地服务器，七牛只用于音频加速。
+
+以下版本都没记录，大概说明下
+
+v1.1.0
+发布 index.html
+
+v1.0.0
+发布 qi.html
