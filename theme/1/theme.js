@@ -4,7 +4,7 @@ $(function() {
   // 背景颜色
   var bgc = '#ffba33';
 
-  $('body').css({
+  $('html, body').css({
     "background": bgc
   })
   // 大喇叭

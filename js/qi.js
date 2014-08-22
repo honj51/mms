@@ -47,18 +47,21 @@ $(function() {
         }
 
         // title图片
-        var $titlePng = $('#title-png');
-        if (data.titlePng) {
-          $titlePng[0].src = baseUrl + data.titlePng;
+        $('#mms-title').html(data.title);
+        
 
-          $titlePng.on('error', function() {
-            $titlePng[0].src = 'icon/title-default.png';
-          })
-        } else if( data.theme === undefined ){
-          // 如果没写主题的话，就采用这个默认皮肤
-          // title图片
-          $titlePng[0].src = 'icon/title-default.png';
-        }
+        // var $titlePng = $('#title-png');
+        // if (data.titlePng) {
+        //   $titlePng[0].src = baseUrl + data.titlePng;
+
+        //   $titlePng.on('error', function() {
+        //     $titlePng[0].src = 'icon/title-default.png';
+        //   })
+        // } else if( data.theme === undefined ){
+        //   // 如果没写主题的话，就采用这个默认皮肤
+        //   // title图片
+        //   $titlePng[0].src = 'icon/title-default.png';
+        // }
 
         // qr图片
         if (data.qrPng) {
