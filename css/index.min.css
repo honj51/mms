@@ -1233,17 +1233,20 @@ body {
 .pagination > .active > span,
 .pagination > .active > span:focus,
 .pagination > .active > span:hover {
+  border-color: #e8dde6;
   background-color: inherit;
 }
 .pagination > li > a:focus,
 .pagination > li > a:hover,
 .pagination > li > span:focus,
 .pagination > li > span:hover {
+  border-color: #e8dde6;
   color: white;
   background-color: inherit;
 }
 .pagination > li > a,
 .pagination > li > span {
+  border-color: #e8dde6;
   background-color: inherit;
 }
 a[href^="http://tongji.baidu.com"] {
