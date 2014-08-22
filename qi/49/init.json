@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "49",
+  "theme": "5",
+  "date": "2014/07/31",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "死神来了，你能逃去哪？",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/49/title.png",
+  "audios": [
+    ["audio/mp4","qi/49/audio.m4a"]
+  ]
+}

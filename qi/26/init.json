@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "26",
+  "theme": "5",
+  "date": "2014/07/03",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "熊孩子来划车了！",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/26/title.png",
+  "audios": [
+    ["audio/mp4","qi/26/audio.m4a"]
+  ]
+}

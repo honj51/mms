@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "41",
+  "theme": "5",
+  "date": "2014/07/21",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "无良商家，天诛地灭",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/41/title.png",
+  "audios": [
+    ["audio/mp4","qi/41/audio.m4a"]
+  ]
+}
