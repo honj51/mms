@@ -19,7 +19,7 @@ mms
 
 1、保存到本地  
 ```
-git clone git://github.com/ingbaobeigroup/mms.git  
+git clone https://github.com/ingbaobeigroup/mms.git  
 ```
 
 2、到当前目录下面，使用静态文件存储，进行发布。  
@@ -51,12 +51,12 @@ $ anywhere 80
   qi.html: 萌萌说第几期详情页面。
   \audio: 基本上没用了的赶脚
   \css: css的文件夹
-    mms.css: 网站开发css
-    mms.min.css: 网站压缩css
+    qi.css: qi.html css
+    qi.min.css: qi.html 压缩css
+    index.css: index.html css
+    index.css: index.html 压缩 css
   \icon: 存放图片的
     loading.gif: 加载中png
-    record-m.png: 收音机
-    record-r.png: 收音机转动的
     mms-logo.png: 朋友圈分享的logo
     mms-mm.png: 默认png
     qr-id.png: 默认png
@@ -65,12 +65,16 @@ $ anywhere 80
     zepto.js: zepto 库主要文件
     event.js: zepto 的事件js
     ajax.js: zepto 的ajax js
-    mms.js: 萌萌说 qi.html 的js 
-    mms.ingbaobei.com.js:萌萌说 qi.html 的js，开发版本，统一上面四个文件 
-    mms.ingbaobei.com.min.js:萌萌说 qi.html 的js，生产版本，统一上面四个文件 
+    qi.js: 萌萌说 qi.html 的js 
+    mms.ingbaobei.com.qi.js:萌萌说 qi.html 的js，开发版本，统一上面四个文件 
+    mms.ingbaobei.com.qi.min.js:萌萌说 qi.html 的压缩 js，生产版本，统一上面四个文件
+    index.js: 萌萌说 index.html 的js 
+    mms.ingbaobei.com.index.js:萌萌说 index.html 的js，开发版本，统一上面四个文件 
+    mms.ingbaobei.com.index.min.js:萌萌说 index.html 的压缩 js，生产版本，统一上面四个文件 
   \less:
     normalize.less: 大神的 normalize ，从bootstrap抄下来的。
-    mms.less: 萌萌说 qi.html 的css
+    qi.less: 萌萌说 qi.html 的css
+    index.less: 萌萌说 qi.html 的css
   \theme: 萌萌说主题文件，加紧了主题，就不需要进行每次都进行切图了。
     \1: 主题1。
     \2: 主题2。
@@ -109,7 +113,7 @@ $(function() {
   // 背景颜色
   var bgc = '#ffcc99'; 
 
-  $('body').css({
+  $('html, body').css({
     "background": bgc
   })
   // 大喇叭
@@ -243,8 +247,7 @@ http://你的ip/qi.html?qi=99999
 ok测试成功的话，提交到七牛对应的地址，然后刷新网址就行。
 
 ##发布
-刚刚本地发布了第 ```99999``` 的萌萌说，然后就发布七牛上吧，让全世界的人都看到。
-登录七牛，选择 萌萌说保险的那个空间，然后根据 文件地址发布就行了。
+刚刚本地发布了第 ```99999``` 的萌萌说，然后就发布七牛上吧，让全世界的人都看到。合并到主分支即可。
 
 例如 ```/qi/99999/``` 里面的资源，选择上传，输入前缀 ```/qi/99999/```。
 然后覆盖 ```/qi/latest/``` 里面的，记得覆盖之前要删除了，才能覆盖。
@@ -295,3 +298,17 @@ git merge r-1/master
 
 git status
 ```
+
+
+版本：
+
+v2.0.0
+转移到本地服务器，七牛只用于音频加速。
+
+以下版本都没记录，大概说明下
+
+v1.1.0
+发布 index.html
+
+v1.0.0
+发布 qi.html

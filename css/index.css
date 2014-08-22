@@ -168,6 +168,7 @@ body {
 .pagination > li > a:hover,
 .pagination > li > span:focus,
 .pagination > li > span:hover {
+  color: white;
   background-color: inherit;
 }
 .pagination > li > a,
