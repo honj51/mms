@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "72",
+  "theme": "1",
+  "date": "2014/08/23",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "P2P加个保险就靠谱吗？",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/72/title.png",
+  "audios": [
+    ["audio/mp4","qi/72/audio.m4a"]
+  ]
+}

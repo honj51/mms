@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "61",
+  "theme": "2",
+  "date": "2014/08/12",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "To：亲爱的女汉子",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/61/title.png",
+  "audios": [
+    ["audio/mp4","qi/61/audio.m4a"]
+  ]
+}

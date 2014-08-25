@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "68",
+  "theme": "3",
+  "date": "2014/08/19",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "冰桶挑战，慈善也能这么玩！",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/68/title.png",
+  "audios": [
+    ["audio/mp4","qi/68/audio.m4a"]
+  ]
+}

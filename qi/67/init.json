@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "67",
+  "theme": "2",
+  "date": "2014/08/18",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "柯震东，你还记得那些年吗？",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/67/title.png",
+  "audios": [
+    ["audio/mp4","qi/67/audio.m4a"]
+  ]
+}
