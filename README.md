@@ -307,7 +307,7 @@ v2.0.0
 以下版本都没记录，大概说明下
 
 v1.1.0
-发布 index.html
+发布 index.html.
 
 v1.0.0
 发布 qi.html .
