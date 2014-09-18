@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "80",
+  "theme": "1",
+  "date": "2014/09/02",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "商业医保补充神技",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/80/title.png",
+  "audios": [
+    ["audio/mp4","qi/80/audio.m4a"]
+  ]
+}

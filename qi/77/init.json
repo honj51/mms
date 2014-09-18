@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "77",
+  "theme": "5",
+  "date": "2014/08/28",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "你的肝还好吗？",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/77/title.png",
+  "audios": [
+    ["audio/mp4","qi/77/audio.m4a"]
+  ]
+}6

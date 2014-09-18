@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "87",
+  "theme": "2",
+  "date": "2014/09/11",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "保险忽悠术之“存款变保险”",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/87/title.png",
+  "audios": [
+    ["audio/mp4","qi/87/audio.m4a"]
+  ]
+}
