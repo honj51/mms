@@ -15,10 +15,35 @@
     <meta name="author" content="ingbaobei">
     <meta name="version" content="1.0.0">
     
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/qi.css?20140822-2"> -->
     <link rel="stylesheet" type="text/css" href="css/qi.min.css?20140822-2" />
   </head>
   <body>
+    <div class="menu clearfix">
+      <div class="menu-list">        
+        <a href="/" class="menu-list-item">
+          <h4 class="menu-list-item-heading">HOME</h4>
+        </a>
+        <a href="/?key=保险干货" class="menu-list-item">
+          <h4 class="menu-list-item-heading">保险干货</h4>
+        </a>
+        <a href="/?key=热点聚焦" class="menu-list-item">
+          <h4 class="menu-list-item-heading">热点聚焦</h4>
+        </a>
+        <a href="/?key=独家视角" class="menu-list-item">
+          <h4 class="menu-list-item-heading">独家视角</h4>
+        </a>        
+      </div>
+    </div>     
+    <form method="get" action="/">
+      <div class="input-group">
+        <input type="text" class="form-control" name="tkey" placeholder="输入关键字进行搜索">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">搜索</button>
+        </span>
+      </div>
+    </form>
     <!-- seo -->
     <div id="page-content" class="page-content" style="position:absolute;z-index:-999;left:-100000px;top:-111111px;">
       <div id="img-content">

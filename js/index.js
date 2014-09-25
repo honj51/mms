@@ -17,6 +17,59 @@ $(function() {
     },100);
   }
 
+
+  // 获取参数
+  var str = location.search
+  str = decodeURI(str);
+  var key = "", 
+    tKey = "";
+  var keyRegex = /\bkey=([^;&=]+)/;
+  var tKeyRegex = /\btkey=([^;&=]+)/;
+  var keyMatch = str.match(keyRegex);
+  var tKeyMatch = str.match(tKeyRegex);
+  console.log(keyMatch, tKeyMatch);
+  if(keyMatch && keyMatch.length){
+    key = keyMatch[1];
+    var search = "/" + str;
+    $('a[href="'+search+'"]').addClass("active");
+    // alert(key);
+  } else if(tKeyMatch && tKeyMatch.length){
+    tKey = tKeyMatch[1];
+    $('input[name="tkey"]').attr("placeholder", tKey);
+    // alert(tKey);
+  }
+
+
+  /**
+   * @name getIndexData
+   * @desc 获取主页数据
+   * @depend ['zepto']
+   * @return {null}
+   **/
+  function selectIndexData(data) {
+    var newData = [];
+    var i = 0, dataTemp,
+      l = data.length;
+    if(key != ""){
+      for(i = 0; i < l; i++){
+        dataTemp = data[i];
+        if(key == dataTemp.key){
+          newData.push(dataTemp);
+        }
+      }
+    } else if(tKey != ""){
+      for(i = 0; i < l; i++){
+        dataTemp = data[i];
+        if(dataTemp.title.indexOf(tKey) > -1){
+          newData.push(dataTemp);
+        }
+      }
+    } else {
+      newData = data;
+    }
+    return newData;
+  }
+
   /**
    * @name getIndexData
    * @desc 获取主页数据
@@ -29,8 +82,8 @@ $(function() {
       data: "",
       dataType: "json",
       success: function( data) {
-        indexData = data;
-        window.indexData = data;
+        indexData = selectIndexData(data);
+        window.indexData = indexData;
         // console.log(data);
         $('.marker-loading').hide();
         getPage( location.href );
@@ -86,10 +139,16 @@ $(function() {
       var dataElem = indexData[begin];
       $dataElem[begin] = $dataElem[begin] || $('<a href="./qi.html?qi='+ dataElem.qi +'" class="list-group-item">' + 
           '<h4 class="list-group-item-heading">第' + dataElem.qi + "期 : " + dataElem.title +'</h4>' +
-          '<p class="list-group-item-text"><span>'+ dataElem.author +'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>'+ dataElem.date +'</span></p>' +
+          '<p class="list-group-item-text"><span>'+ dataElem.author +'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>'+ dataElem.date +'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>'+ dataElem.key +'</span></p>' +
         '</a>');
       // console.log( $dataElem );
       mmsListBox.append( $dataElem[begin] );
+    }
+    if(indexData.length < 1){
+      mmsListBox.append( '<a href="./" class="list-group-item">' + 
+          '<h4 class="list-group-item-heading">暂无查询结果</h4>' +
+          '<p class="list-group-item-text"><span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span></span></p>' +
+        '</a>' );
     }
 
     pagination.empty();

@@ -1252,6 +1252,9 @@ body {
 .mms-pager .pagination {
   margin: 0px;
 }
+.mms-pager .pagination:empty {
+  border: 0;
+}
 .pagination > .active > a,
 .pagination > .active > a:focus,
 .pagination > .active > a:hover,
@@ -1295,55 +1298,57 @@ a[href^="http://tongji.baidu.com"] {
   left: -100000px;
   top: -111111px;
 }
-.menu{
-      width: 100%;
-      padding: 4px;
-      /*border:7px solid #e8dde6;*/
-      border-radius: 0px;
-      background-color: #730f0f;
-      text-align: left;
-      margin-bottom: 5px;      
-    }
-    .menu-list{
-      padding: 0;
-      margin: 0;
-    }
-    .menu-list .menu-list-item{
-      background-color: inherit;
-      padding: 5px 3px;
-      border: 0;
-      border-bottom: .2em solid #4a0909;
-      border-radius: 0;
-      color: white;
-    }
-    .menu-list a{
-      display: inline-block;
-    }
-    .menu-list .menu-list-item:hover{
-      color: white;
-      background-color: inherit;
-      background-image: -webkit-radial-gradient(top center,circle, #c0cde6, #ca95b6 10%, #c34455 30%, #b81013 50%, #950e0e);    
-    }
-    a.menu-list-item:hover, a.menu-list-item:focus{
-      text-decoration:none;
-    }
-    .menu-list-item{
-      position: ralative;
-      margin-bottom: -1px;
-    }
-    .menu-list .menu-list-item .menu-list-item-heading{
-      color: white;   
-    }
-    .menu-list-item-heading{
-      margin-top: 0;
-      margin-bottom: 5px;
-      font-size: 14px;
-    }
-    .input-group{
-      width: 98%;
-      left: 1%;
-      position: relative;
-      display: table;
-      border-collapse: separate;
-    }
+.menu {
+  width: 100%;
+  padding: 4px;
+  /*border:7px solid #e8dde6;*/
+  border-radius: 0px;
+  background-color: #730f0f;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.menu-list {
+  padding: 0;
+  margin: 0;
+}
+.menu-list .menu-list-item {
+  background-color: inherit;
+  padding: 5px 3px;
+  border: 0;
+  border-bottom: .2em solid #4a0909;
+  border-radius: 0;
+  color: white;
+}
+.menu-list a {
+  display: inline-block;
+}
+.menu-list .menu-list-item:hover,
+.menu-list .menu-list-item.active {
+  color: white;
+  background-color: inherit;
+  background-image: -webkit-radial-gradient(top center, circle, #c0cde6, #ca95b6 10%, #c34455 30%, #b81013 50%, #950e0e);
+}
+a.menu-list-item:hover,
+a.menu-list-item:focus {
+  text-decoration: none;
+}
+.menu-list-item {
+  position: ralative;
+  margin-bottom: -1px;
+}
+.menu-list .menu-list-item .menu-list-item-heading {
+  color: white;
+}
+.menu-list-item-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.input-group {
+  width: 98%;
+  left: 1%;
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
 /*# sourceMappingURL=index.css.map */
