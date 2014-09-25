@@ -1,17 +1,17 @@
-.menu{
+.menu {
   width: 100%;
   padding: 4px;
   /*border:7px solid #e8dde6;*/
   border-radius: 0px;
   background-color: #730f0f;
   text-align: left;
-  margin-bottom: 5px;      
+  margin-bottom: 5px;
 }
-.menu-list{
+.menu-list {
   padding: 0;
   margin: 0;
 }
-.menu-list .menu-list-item{
+.menu-list .menu-list-item {
   background-color: inherit;
   padding: 5px 3px;
   border: 0;
@@ -19,49 +19,49 @@
   border-radius: 0;
   color: white;
 }
-.menu-list a{
+.menu-list a {
   display: inline-block;
 }
-.menu-list .menu-list-item:hover, .menu-list .menu-list-item.active{
+.menu-list .menu-list-item:hover,
+.menu-list .menu-list-item.active {
   color: white;
   background-color: inherit;
-  background-image: -webkit-radial-gradient(top center,circle, #c0cde6, #ca95b6 10%, #c34455 30%, #b81013 50%, #950e0e);
+  background-image: -webkit-radial-gradient(top center, circle, #c0cde6, #ca95b6 10%, #c34455 30%, #b81013 50%, #950e0e);
 }
-a.menu-list-item:hover, a.menu-list-item:focus{
-  text-decoration:none;
+a.menu-list-item:hover,
+a.menu-list-item:focus {
+  text-decoration: none;
 }
-.menu-list-item{
+.menu-list-item {
   position: ralative;
   margin-bottom: -1px;
 }
-.menu-list .menu-list-item .menu-list-item-heading{
-  color: white;   
+.menu-list .menu-list-item .menu-list-item-heading {
+  color: white;
 }
-.menu-list-item-heading{
+.menu-list-item-heading {
   margin-top: 0;
   margin-bottom: 5px;
   font-size: 14px;
 }
-.input-group{
+.input-group {
   width: 98%;
   left: 1%;
   position: relative;
   display: table;
   border-collapse: separate;
 }
-
-
-input{
+input {
   font-family: inherit;
   margin: 0;
 }
-.input-group{
+.input-group {
   left: 1%;
   width: 98%;
   position: relative;
   display: table;
 }
-.input-group .form-control{
+.input-group .form-control {
   display: table-cell;
   width: 100%;
   margin-bottom: 0;
@@ -77,7 +77,7 @@ input{
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.input-group-btn{
+.input-group-btn {
   position: relative;
   white-space: nowrap;
   width: 1%;
@@ -86,25 +86,26 @@ input{
   border: 1px solid #ccc;
   line-height: 1.328;
 }
-.input-group-btn:last-child>.btn{
+.input-group-btn:last-child > .btn {
   margin-left: -1px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-.input-group-btn>.btn{
+.input-group-btn > .btn {
   position: relative;
 }
-.btn-default{
+.btn-default {
   color: #333;
   background-color: #fff;
   border-color: #ccc;
 }
-.btn-default:hover, .btn-default:focus{
+.btn-default:hover,
+.btn-default:focus {
   color: #333;
   background-color: #ebebeb;
   border-color: #adadad;
 }
-.btn{
+.btn {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;

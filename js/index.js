@@ -27,7 +27,7 @@ $(function() {
   var tKeyRegex = /\btkey=([^;&=]+)/;
   var keyMatch = str.match(keyRegex);
   var tKeyMatch = str.match(tKeyRegex);
-  console.log(keyMatch, tKeyMatch);
+  // console.log(keyMatch, tKeyMatch);
   if(keyMatch && keyMatch.length){
     key = keyMatch[1];
     var search = "/" + str;
