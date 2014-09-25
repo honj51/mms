@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "96",
+  "theme": "5",
+  "date": "2014/09/24",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "卖保险的都嫌弃你，别看了，就是你！",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/96/title.png",
+  "audios": [
+    ["audio/mp4","qi/96/audio.m4a"]
+  ]
+}
