@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "98",
+  "theme": "1",
+  "date": "2014/09/26",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "保险骗术大揭秘！",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/98/title.png",
+  "audios": [
+    ["audio/mp4","qi/98/audio.m4a"]
+  ]
+}
