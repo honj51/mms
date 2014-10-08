@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "104",
+  "theme": "1",
+  "date": "2014/10/04",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "亚运会落幕，小鲜肉再见！",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/104/title.png",
+  "audios": [
+    ["audio/mp4","qi/104/audio.m4a"]
+  ]
+}
