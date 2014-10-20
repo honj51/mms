@@ -1,0 +1,14 @@
+{
+  "baseUrl": "",
+  "qi": "112",
+  "theme": "3",
+  "date": "2014/10/17",
+  "author": "萌萌",
+  "app": "mms",
+  "title": "现在问题来了：香港保险哪家强，盈保倍完爆蓝翔！",
+  "titleEnd": "-萌萌说-盈保倍",
+  "titlePng": "qi/112/title.png",
+  "audios": [
+    ["audio/mp4","qi/112/audio.m4a"]
+  ]
+}
